@@ -19,6 +19,19 @@ describe SessionsController do
       end
     end
 
-    context "with invalid inputs"
+    context "with invalid inputs" do
+      it "redirects to root path if username is blank" do
+        post :create, username: "", dialect: "yoda"
+        expect(response).to redirect_to root_path
+      end
+      it "redirects to root path if dialect is blank" do
+        post :create, username: "joe", dialect: ""
+        expect(response).to redirect_to root_path
+      end
+      it "sets flash danger" do
+        post :create, username: "", dialect: ""
+        expect(flash[:danger]).to eq("Please check your inputs")
+      end
+    end
   end
 end

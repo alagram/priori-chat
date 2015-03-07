@@ -1,0 +1,13 @@
+<div class="content">
+  <%= form_tag sessions_path, autocomplete: "off" do %>
+    <div class="form-group">
+      <%= text_field_tag :username, nil, class: "my-signin-tag form-control", placeholder: "Username", autofocus: '' %>
+    </div>
+    <div class="form-group">
+      <%= select_tag "dialect", options_for_select([ "Pirate", "Yoda", "Valley Girl" ], "MasterCard"), class: "form-control my-signin-tag", prompt: 'Select Dialect' %>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-custom">Log In</button>
+    </div>
+  <% end %>
+</div>

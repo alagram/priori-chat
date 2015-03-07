@@ -3,12 +3,19 @@
 <head>
   <title>PrioriChat</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="padding-bottom: 70px">
 
-<%= yield %>
+  <%= render 'shared/header' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1" id="content-div"></div>
+      <%= render 'shared/messages' %>
+    </div>
+    <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </div>
 
 </body>
 </html>

@@ -34,4 +34,24 @@ describe SessionsController do
       end
     end
   end
+
+  describe "GET destroy" do
+    before do
+      session[:username] = "joe"
+      get :destroy
+    end
+
+    it "clears the username session" do
+      expect(session[:username]).to be_nil
+    end
+    it "clears the dialect session" do
+      expect(session[:dialect]).to be_nil
+    end
+    it "redirects to root path" do
+      expect(response).to redirect_to root_path
+    end
+    it "sets flash info" do
+      expect(flash[:info]).to_not be_nil
+    end
+  end
 end

@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = Message.all
+    @online_users = OnlineUser.all
   end
 
   def create

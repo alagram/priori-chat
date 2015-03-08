@@ -9,7 +9,7 @@ class HackDayService
     @message = message
   end
 
-  def translate!
+  def translate
     text = URI::encode(message)
     uri = URI("http://isithackday.com/arrpi.php?text=#{text}&format=json")
     response = JSON.parse(Net::HTTP.get(uri))

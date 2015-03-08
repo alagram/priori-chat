@@ -1,5 +1,3 @@
-require 'net/http'
-require 'open-uri'
 include ActionView::Helpers::SanitizeHelper
 
 class DegreaveService

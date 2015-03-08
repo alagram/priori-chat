@@ -12,10 +12,10 @@ class MessagesController < ApplicationController
     message = params["message"]["body"]
     if session[:dialect] == "Pirate"
       result = HackDayService.new(message).translate
-      @message = Message.create(message_params.merge!(author: current_user, "body" => "#{result}"))
+      @message = Message.create(message_params.merge!(author: current_user, dialect: session[:dialect], "body" => "#{result}"))
     else
       result = DegreaveService.new(message, user_dialect).translate
-      @message = Message.create(message_params.merge!(author: current_user, "body" => "#{result}"))
+      @message = Message.create(message_params.merge!(author: current_user, dialect: session[:dialect], "body" => "#{result}"))
     end
   end
 

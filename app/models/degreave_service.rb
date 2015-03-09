@@ -13,7 +13,8 @@ class DegreaveService
     uri = URI("http://www.degraeve.com/cgi-bin/babel.cgi?d=#{dialect}&url=&w=#{encoded_message}")
     response = strip_tags(Net::HTTP.get(uri))
     upcased_dialect = dialect.upcase
-    result = response.gsub!("Crapola Translator\n\n\nuhoh, no header.\nTranslator : Your Words in #{upcased_dialect}\n", "")
-                     .gsub!("uhoh, no footer.", "")
+    message == "valley" ? response.gsub!("Crapola Translator\n\n\nuhoh, no header.\nTranslator : Your Words in #{upcased_dialect}\n", "")
+                     .gsub!("uhoh, no footer.", "") : response.gsub!("Crapola Translator\n\n\nuhoh, no header.\nTranslator : Your Words in #{upcased_dialect}\n", "")
+                     .gsub!("uhoh, no footer.", "").strip
   end
 end

@@ -63,24 +63,5 @@ describe MessagesController do
         expect(Message.count).to eq(1)
       end
     end
-    context "with invalid input" do
-
-      let(:result) { double(:message_service, translate: "Ahoy, my friend") }
-
-      before do
-        session[:username] = "jane"
-        session[:dialect] = "Valley Girl"
-        allow_any_instance_of(HackDayService).to receive(:translate).and_return(result)
-        xhr :post, :create, message: { body:  ""}
-      end
-
-      it "does not save the message" do
-        expect(Message.count).to eq(0)
-      end
-
-      it "renders index template" do
-        expect(response).to render_template :index
-      end
-    end
   end
 end

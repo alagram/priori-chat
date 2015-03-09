@@ -3,6 +3,10 @@ require 'rails_helper'
 describe MessagesController do
   describe "GET index" do
 
+    it_behaves_like "authenticated user" do
+      let(:action) { get :index }
+    end
+
     context "authenticated users" do
 
       let(:message) { Fabricate(:message, body: "Hello world", dialect: "Pirate") }

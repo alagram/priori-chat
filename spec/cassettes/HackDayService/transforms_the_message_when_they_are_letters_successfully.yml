@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://isithackday.com/arrpi.php?format=json&text=Hello%20my%20friend,%20do%20you%20know%20where%20I%20can%20get%20some%20shoes?
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - isithackday.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '151'
+      Content-Type:
+      - text/javascript
+      Server:
+      - Apache/2.2.22
+      Vary:
+      - User-Agent
+      Last-Modified:
+      - Mon, 09 Mar 2015 12:16:30 GMT
+      Via:
+      - 1.1 acc-epc1-cs02.surfline.gh
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 09 Mar 2015 12:17:22 GMT
+    body:
+      encoding: UTF-8
+      string: '{"translation":{"english":"Hello my friend, do you know where I can
+        get some shoes?","pirate":"Ahoy my mate, do you know where I can get some
+        shoes?"}}'
+    http_version: 
+  recorded_at: Mon, 09 Mar 2015 12:19:08 GMT
+recorded_with: VCR 2.9.3

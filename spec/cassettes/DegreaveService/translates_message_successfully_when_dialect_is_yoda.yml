@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.degraeve.com/cgi-bin/babel.cgi?d=yoda&url=&w=This%20thing%20is%20fun%20and%20exciting
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.degraeve.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '376'
+      Content-Type:
+      - text/html
+      Server:
+      - nginx
+      Last-Modified:
+      - Mon, 09 Mar 2015 12:36:29 GMT
+      Via:
+      - 1.1 acc-epc1-cs02.surfline.gh
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 09 Mar 2015 12:37:09 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><body><head><title>Crapola Translator</title>
+        <LINK href='/deg.css' rel=stylesheet type=text/css>
+        </head>
+        uhoh, no header.<table border=0 cellpadding=0 cellspacing=0 align=center width=640>
+        <tr><td><h3><a href="/translator.shtml">Translator</a> : Your Words in YODA</h3><blockquote><p>
+         Fun and exciting, this thing is </p></blockquote></td></tr></table>uhoh, no footer.
+    http_version: 
+  recorded_at: Mon, 09 Mar 2015 12:38:55 GMT
+recorded_with: VCR 2.9.3

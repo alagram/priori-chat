@@ -11,6 +11,9 @@ describe SessionsController do
       it "sets dialect into the session" do
         expect(session[:dialect]).to eq("yoda")
       end
+      it "creates an online user" do
+        expect(OnlineUser.first.username).to eq("albert")
+      end
       it "redirects to home path" do
         expect(response).to redirect_to home_path
       end
@@ -38,6 +41,7 @@ describe SessionsController do
   describe "GET destroy" do
     before do
       session[:username] = "joe"
+      Fabricate(:online_user, username: session[:username])
       get :destroy
     end
 
@@ -49,6 +53,9 @@ describe SessionsController do
     end
     it "redirects to root path" do
       expect(response).to redirect_to root_path
+    end
+    it "deletes the online user" do
+      expect(OnlineUser.count).to eq(0)
     end
     it "sets flash info" do
       expect(flash[:info]).to_not be_nil

@@ -1,0 +1,16 @@
+<li class="left clearfix">
+  <div class="chat-body clearfix">
+    <div class="header">
+      <strong class="primary-font"><%= message.author %></strong>
+      <small class="pull-right text-muted">
+      <span class="glyphicon glyphicon-time">
+        <%= message.created_at.strftime("%H:%M") %>
+      </span>
+      </small>
+    </div>
+      <p>
+        <i <%= class_for(message.dialect).html_safe %>></i>
+        <%= message.body %>
+      </p>
+  </div>
+</li>

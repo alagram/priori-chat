@@ -13,19 +13,19 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li>
-            <p class="navbar-text">
-              Signed in as <%= current_user  %>
-            </p>
-          </li>
-          <li>
-            <div class="btn-group">
-              <%= link_to 'Sign Out', sign_out_path, class: 'btn btn-default navbar-btn' %>
-            </div>
-          </li>
+          <div class="btn-group pull-right">
+            <%= link_to 'Sign Out', sign_out_path, class: 'btn btn-default navbar-btn' %>
+          </div>
+
+          <p class="navbar-text full-right">
+            welcome <%= current_user  %>!
+          </p>
         <% end %>
+
+
+      <ul class="nav navbar-nav navbar-right">
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>

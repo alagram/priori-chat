@@ -23,6 +23,7 @@ group :development, :test do
   gem 'fabrication'
   gem 'pry'
   gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 group :test do

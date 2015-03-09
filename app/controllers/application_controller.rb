@@ -11,5 +11,13 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user
   end
 
+  def emojify(content)
+    context = {gfm: true, asset_root: "/images"}
+    pipeline = HTML::Pipeline.new([
+      HTML::Pipeline::EmojiFilter
+      ], context)
+    pipeline.call(content)[:output]
+  end
+
   helper_method :current_user
 end

@@ -1,3 +1,16 @@
+<% if @message.errors.any? %>
+  <div class="row">
+    <div class="alert alert-danger col-md-10 col-md-offset-1">
+      <ul>
+        <% @message.errros.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 chat-area">
 
   <div class="container">

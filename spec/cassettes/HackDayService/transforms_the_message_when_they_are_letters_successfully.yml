@@ -20,27 +20,23 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Content-Length:
-      - '151'
-      Content-Type:
-      - text/javascript
+      Date:
+      - Mon, 09 Mar 2015 19:01:25 GMT
       Server:
       - Apache/2.2.22
+      X-Powered-By:
+      - PHP/5.3.29
       Vary:
       - User-Agent
-      Last-Modified:
-      - Mon, 09 Mar 2015 12:16:30 GMT
-      Via:
-      - 1.1 acc-epc1-cs02.surfline.gh
-      Connection:
-      - keep-alive
-      Date:
-      - Mon, 09 Mar 2015 12:17:22 GMT
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/javascript
     body:
       encoding: UTF-8
       string: '{"translation":{"english":"Hello my friend, do you know where I can
-        get some shoes?","pirate":"Ahoy my mate, do you know where I can get some
+        get some shoes?","pirate":"Avast my mate, do you know where I can get some
         shoes?"}}'
     http_version: 
-  recorded_at: Mon, 09 Mar 2015 12:19:08 GMT
+  recorded_at: Mon, 09 Mar 2015 19:02:15 GMT
 recorded_with: VCR 2.9.3

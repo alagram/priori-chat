@@ -11,6 +11,6 @@ describe DegreaveService do
     message = "This thing is fun and exciting"
     dialect = "yoda"
     response = DegreaveService.new(message, dialect).translate
-    expect(response).to eq(" Fun and exciting, this thing is ")
+    expect(response).to eq("Fun and exciting, this thing is")
   end
 end

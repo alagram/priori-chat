@@ -14,6 +14,7 @@ gem 'faye'
 gem "font-awesome-rails"
 gem 'html-pipeline'
 gem 'gemoji'
+gem 'foreman'
 
 group :development do
   gem 'thin'

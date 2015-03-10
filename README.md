@@ -1,4 +1,4 @@
-== README
+###README
 
 Simple chat app with Rails.
 
@@ -20,5 +20,3 @@ How to get started:
 * run `foreman start` to start app.
 
 * run `rspec` to run entire test suite.
-
-* ...

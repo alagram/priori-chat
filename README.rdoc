@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple chat app with Rails.
 
-Things you may want to cover:
+Extra features:
 
-* Ruby version
+- Client side validation
+- Users can send emoji icons
 
-* System dependencies
+How to get started:
 
-* Configuration
+* Ruby version - 2.1.2
 
-* Database creation
+* run `bundle install` to install gem dependencies.
 
-* Database initialization
+* Uses a PostgreSQL database. Specify your username and password in `database.yml` and run `rake db:create:all` to get started.
 
-* How to run the test suite
+* run `rake emoji` to copy emoji images to your public directory.
 
-* Services (job queues, cache servers, search engines, etc.)
+* run `foreman start` to start app.
 
-* Deployment instructions
+* run `rspec` to run entire test suite.
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

@@ -10,7 +10,7 @@
     </div>
       <p>
         <i <%= class_for(message.dialect).html_safe %>></i>
-        <%= message.body %>
+        <%= message.body.html_safe %>
       </p>
   </div>
 </li>

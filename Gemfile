@@ -12,6 +12,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faye'
 gem "font-awesome-rails"
+gem 'html-pipeline'
+gem 'gemoji'
+gem 'foreman'
 
 group :development do
   gem 'thin'
@@ -22,6 +25,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'fabrication'
   gem 'pry'
-  gem 'faker'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'capybara'
 end
 

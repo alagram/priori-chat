@@ -1,6 +1,6 @@
 var myInterval = setInterval(function(){
   checkOnlineUsers()
-}, 3000);
+}, 15000);
 
 function checkOnlineUsers(){
   $.ajax({
